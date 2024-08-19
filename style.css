@@ -1,18 +1,217 @@
 * {
-  background-color: black;
-  color: white;
-  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primeclr: #10ac59;
+  --white: #ffffff;
+  --blacko: #000000;
+}
+
+body {
+  background-color: var(--blacko);
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  width: 1300px;
+  margin: 0 auto;
 }
 
 ::selection {
-  background-color: white;
-  color: black;
-}
-
-:root {
-  --primeclr: #63eda3;
+  background-color: var(--white);
+  color: var(--blacko);
 }
 
 span {
   color: var(--primeclr);
+  filter: drop-shadow(-1px -1px 5px #63eda369);
+}
+
+/* Header Section */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  z-index: 100;
+  background-color: var(--blacko);
+  position: sticky;
+  top: 0;
+}
+
+/* Logo */
+#logo {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+/* Navigation Containor  */
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Links */
+
+nav a {
+  color: var(--white);
+  display: inline-block;
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 24px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+nav a:nth-child(4) {
+  margin-right: 0;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust based on the desired underline position */
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--primeclr);
+  transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+/* Adjust the width of the underline on hover */
+nav a:hover::before {
+  width: 100%;
+}
+
+/* Navigation on Hover */
+nav a:hover {
+  color: var(--primeclr);
+}
+
+/* Hero Section Image */
+.containor {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.my-img {
+  display: flex;
+  width: 38%;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  filter: drop-shadow(0px 0px 30px hsla(148, 83%, 37%, 0.293));
+}
+
+/* hero Section Content */
+.content {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.content h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.content h1 {
+  font-size: 52px;
+  font-weight: 500;
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Social Icons */
+.Sicons i {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--primeclr);
+  font-size: 22px;
+  border: 1px solid var(--primeclr);
+  border-radius: 100%;
+  padding: 11px;
+  margin-right: 10px;
+  /* transition: ease-in 0.5s; */
+}
+
+.Sicons i:hover {
+  transition: ease 0.3s;
+  transform: scale(1.2);
+}
+
+button {
+  background-color: var(--primeclr);
+  border: 0;
+  border-radius: 4px;
+  padding: 15px 50px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  width: 250px;
+  margin-top: 15px;
+  /* transition: ease-in; */
+}
+
+button:hover {
+  transition: ease 0.3s;
+  transform: scale(1.05);
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* Media Query for Tablets (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* Media Query for Mobile Devices (up to 767px) */
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
