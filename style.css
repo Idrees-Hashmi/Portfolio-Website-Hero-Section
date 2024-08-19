@@ -1,9 +1,18 @@
 * {
   background-color: black;
   color: white;
+  font-family: "Oswald", sans-serif;
 }
 
 ::selection {
   background-color: white;
   color: black;
+}
+
+:root {
+  --primeclr: #63eda3;
+}
+
+span {
+  color: var(--primeclr);
 }
